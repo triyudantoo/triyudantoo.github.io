@@ -1,0 +1,175 @@
+<!--
+Levidio Lorem Ipsum
+http://rootpixel.co.id/levidio/
+Template name: Book 4
+Order at: http://rootpixel.co.id/levidio/
+Author: Rootpixel
+Website: http://www.rootpixel.net/
+Contact: support@rootpixel.net
+Social: http://facebook.com/rootpixel
+Version : v1.0
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" CONTENT="noindex, nofollow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+    
+    <title>Book 4 - Subscribers</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/linearicon.min.css">
+    <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <style type="text/css">
+    header{
+        height: 100vh!important;
+    }
+    .subscriber-list{
+        padding: 20px;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+    }
+
+    /* Dark Style */
+    .subscriber-list.dark{
+        background-color: #1d1d1d;
+        color: #999;
+    }
+    .subscriber-list.dark input, .subscriber-list.dark select{
+        color: #ddd;
+        padding: 6px 10px;
+        background: #666;
+        border: 0;
+    }
+    .subscriber-list.dark input:focus, .subscriber-list.dark select:focus{
+        outline: none;
+        box-shadow: none;
+    }
+    .subscriber-list.dark td{
+        color: #aaa!important;
+        font-weight: 400!important;
+        border-color: #333!important;
+    }
+    .subscriber-list.dark th{
+        font-weight: 600!important;
+        color: #EEE!important;
+        border-color: #333!important;
+    }
+
+    /* Light Style */
+    .subscriber-list.light{
+        background-color: #fff;
+        color: #4d4d4d;
+    }
+    .subscriber-list.light input, .subscriber-list.light select{
+        color: #4d4d4d;
+        padding: 6px 10px;
+        background: #eee;
+        border: 0;
+    }
+    .subscriber-list.light input:focus, .subscriber-list.light select:focus{
+        outline: none;
+        box-shadow: none;
+    }
+    .subscriber-list.light td{
+        color: #4d4d4d!important;
+        font-weight: 400!important;
+        border-color: #eee!important;
+    }
+    .subscriber-list.light th{
+        font-weight: 600!important;
+        color: #2d2d2d!important;
+        border-color: #ccc!important;
+    }
+</style>
+</head>
+
+<body>
+
+    <!-- Start: Navbar -->
+    <nav id="navbar-book-2" class="navbar navbar-expand-md fixed-top navbar-page animated-nav">
+        <div class="container">
+            <a class="navbar-brand" href="#book-2">
+                <span class="text-white">Levidio</span> Book.
+            </a>
+        </div>
+    </nav>
+    <!-- End: Navbar -->
+
+    <!-- Subscribers -->
+    <header id="subscribers" class="pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 class="text-center text-white">Here's Your Subscriber List</h3>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-sm-8 offset-sm-2">
+                    <div class="subscriber-list light">
+                        <table id="subscribers-table" class="table table-responsive-md" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Email address</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td width="30px">1</td>
+                                    <td>Levidio</td>
+                                    <td>info@rootpixel.net</td>
+                                    <td>
+                                        <button type="submit" class="btn btn--subscribe" onclick="return confirm('This will permanently delete the data. Are you sure?')">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End: Subscribers -->
+
+<!-- Scripts -->
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" src="js/dataTables.buttons.min.js"></script> 
+<script type="text/javascript" src="js/jszip.min.js"></script> 
+<script type="text/javascript" src="js/buttons.html5.min.js"></script> 
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#subscribers-table').DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+            {
+                extend: 'csvHtml5',
+                text: '<i class="lnr lnr-printer"></i> CSV',
+                titleAttr: 'CSV',
+                title: "Subscribers",
+                exportOptions: {
+                    columns: ':not(:last-child)',
+                }
+            }
+            ]
+        });
+    } );
+</script>
+</body>
+</html>
