@@ -433,7 +433,7 @@ nav.animated-nav {
 header {
   padding-top: 200px;
   min-height: 700px;
-  background: linear-gradient(to bottom right, rgba(100, 145, 115,0.75), rgba(219, 213, 164,0.75)),url(../img/teras.jpg) center center no-repeat;
+  background: linear-gradient(to bottom right, rgba(100, 145, 115,0.75), rgba(219, 213, 164,0.75)),url(../img/teras_swipe.jpg) center center no-repeat;
   background-size: cover;
 }
 header:before {
